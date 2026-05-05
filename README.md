@@ -11,3 +11,13 @@ SQL, Google BigQuery
 - Which customers generated the most revenue
 - Which products were underperforming
 - How sales trended month to month
+SQL
+SELECT
+  customer_id,
+  SUM (quantity * price) AS Total_Revenue
+FROM
+  Sales.Store_sales
+GROUP BY
+  customer_id
+ORDER BY
+  SUM (quantity * price) AS Total_Revenue DESC
