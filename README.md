@@ -10,8 +10,21 @@ SQL, Google BigQuery
 - How sales trended month to month
 ```sql
 SELECT customer_id, 
-       SUM(revenue) AS total_revenue
+       SUM(quantity * price) AS Revenue
 FROM sales
 GROUP BY customer_id
 ORDER BY total_revenue DESC;
 ```
+This query identifies the top customers by total revenue - helping a business understand who their most valuable customers are.
+```sql
+SELECT
+ EXTRACT(YEAR FROM order_date) AS year,
+ EXTRACT(MONTH FROM order_date) As month,
+ SUM (quantity * price) AS Revenue
+FROM sales
+GROUP BY 
+       year, month
+ORDER BY
+  REVENUE DESC
+```
+This query show the monthly revenue trend.
