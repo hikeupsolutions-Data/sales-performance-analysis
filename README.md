@@ -1,10 +1,10 @@
-# Sales Performance Analysis - SQL (BigQuery)
+## Sales Performance Analysis - SQL (BigQuery)
 SQL analysis of sales data using BigQuery
-### Overview
+## Overview
 This project analyses sales data to identify top customers, product performance, and monthly revenue trends.
-### Tools Used
+## Tools Used
 SQL, Google BigQuery
-### Key Insights
+## Key Insights
 - Which customers generated the most revenue
 - Which products were underperforming
 - How sales trended month to month
@@ -20,7 +20,7 @@ GROUP BY
 ORDER BY
  Revenue DESC;
 ```
-This query show the monthly revenue trend with the best perfroming month at the top. 
+This query shows the monthly revenue trend with the best performing month at the top. 
 ```sql
 SELECT
  EXTRACT(YEAR FROM order_date) AS year,
