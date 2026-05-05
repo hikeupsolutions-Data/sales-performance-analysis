@@ -11,7 +11,7 @@ SQL, Google BigQuery
 - Which customers generated the most revenue
 - Which products were underperforming
 - How sales trended month to month
-SQL
+### SQL
 SELECT
   customer_id,
   SUM (quantity * price) AS Total_Revenue
