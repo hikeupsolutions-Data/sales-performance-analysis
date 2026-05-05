@@ -9,8 +9,9 @@ SQL, Google BigQuery
 - Which products were underperforming
 - How sales trended month to month
 ```sql
-SELECT customer_id, 
-       SUM(quantity * price) AS Revenue
+SELECT
+ customer_id, 
+ SUM(quantity * price) AS Revenue
 FROM sales
 GROUP BY customer_id
 ORDER BY total_revenue DESC;
@@ -25,6 +26,17 @@ FROM sales
 GROUP BY 
        year, month
 ORDER BY
-  REVENUE DESC
+  Revenue DESC
 ```
-This query show the monthly revenue trend.
+This query show the monthly revenue trend with the best perfroming month at the top. 
+```sql
+SELECT
+       category,
+       SUM(quantity * price) AS Revenue
+FROM sales
+GROUP BY
+       category
+ORDER BY
+Revenue DESC
+```
+This query shows the total revenue by category with the best performing category at the top. 
