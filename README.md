@@ -20,6 +20,10 @@ GROUP BY
 ORDER BY
  Revenue DESC;
 ```
+
+** Business Recommendation ** - The business could improve retention and profitability by focusing loyalty efforts on high-value customers and prioritising high-performing product categories.
+
+
 This query shows the monthly revenue trend with the best performing month at the top. 
 ```sql
 SELECT
